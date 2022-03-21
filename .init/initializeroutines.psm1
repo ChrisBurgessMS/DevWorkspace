@@ -1,6 +1,6 @@
 ﻿function InitializeWFEnvironment
 {
-    Open-DevEnvironment "WindowsFabric" "wf" $null $null
+    Open-DevEnvironment "WindowsFabric" "wf"
 }
 
 Export-ModuleMember -Function 'InitializeWFEnvironment'
