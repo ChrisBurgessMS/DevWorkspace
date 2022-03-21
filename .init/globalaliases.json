@@ -1,0 +1,33 @@
+{
+    "aliases": [
+        // Place aliases to commands you like here
+        {
+            "Name":  "init-wf",
+            "Value": "InitializeWFEnvironment"
+        },
+        {
+            "Name":  "..",
+            "Value": "GotoParentDir"
+        },
+        {
+            "Name":  "dir",
+            "Value": "dircmd",
+            "Option": "AllScope"
+        },
+        {
+            "Name":  "ll",
+            "Value": "dircmd",
+            "Option": "AllScope"
+        },
+        {
+            "Name":  "rd",
+            "Value": "rdcmd",
+            "Option": "AllScope"
+        },
+        {
+            "Name":  "cd",
+            "Value": "cdcmd",
+            "Option": "AllScope"
+        }
+    ]
+}

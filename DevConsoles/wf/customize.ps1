@@ -1,0 +1,1 @@
+Import-Module $PSScriptRoot\GlobalFunctions.psm1 -force -global

@@ -1,0 +1,2 @@
+-flp:"Summary;LogFile=summary.log;Verbosity=diag"
+-bl:LogFile=summary.binlog;ProjectImports=Embed
