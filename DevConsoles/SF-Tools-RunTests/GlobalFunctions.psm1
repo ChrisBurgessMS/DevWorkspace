@@ -16,17 +16,6 @@ function Disable-LinuxView
     $Env:DefineConstants = $Env:DefineConstants -replace "DotNetCoreClrLinux", ""
 }
 
-function Switch-Branch
-{
-    param (
-        [string] $branch
-    )
-
-    iex "git checkout $branch"
-    Open-DevEnvironment2
-}
-
 Export-ModuleMember -Function 'Open-SetupSolution'
 Export-ModuleMember -Function 'Enable-LinuxView'
 Export-ModuleMember -Function 'Disable-LinuxView'
-Export-ModuleMember -Function 'Switch-Branch'

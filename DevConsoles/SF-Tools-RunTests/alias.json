@@ -1,0 +1,28 @@
+{
+    "aliases": [
+        {
+            "Name":  "rb",
+            "Value": "$PSScriptRoot\\rb.ps1"
+        },
+        {
+            "Name":  "rbm",
+            "Value": "$PSScriptRoot\\rbm.ps1"
+        },
+        {
+            "Name":  "devenv",
+            "Value": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Enterprise\\Common7\\IDE\\devenv.exe"
+        },
+        {
+            "Name":  "n",
+            "Value": "notepad++"
+        },
+        {
+            "Name":  "root",
+            "Value": "GotoRoot"
+        },
+        {
+            "Name":  "srcroot",
+            "Value": "GotoSrcRoot"
+        }
+    ]
+}

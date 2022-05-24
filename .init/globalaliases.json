@@ -2,10 +2,6 @@
     "aliases": [
         // Place aliases to commands you like here
         {
-            "Name":  "init-wf",
-            "Value": "InitializeWFEnvironment"
-        },
-        {
             "Name":  "..",
             "Value": "GotoParentDir"
         },

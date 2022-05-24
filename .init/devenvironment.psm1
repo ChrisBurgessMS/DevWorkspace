@@ -1,8 +1,7 @@
 function Initialize-DevEnvironment
 {
     param (
-        [string] $environmentName,
-        [string] $arguments
+        [string] $environmentName
     )
 
     # Call the repo's initialize command
@@ -16,8 +15,8 @@ function Initialize-DevEnvironment
     $tmp = [System.IO.Path]::GetTempFileName()
 
     # Call the repo init script
-    LogInfo "Calling `"$global:DevPrivateRoot\init.cmd`" $arguments"
-    cmd /c "call `"$global:DevPrivateRoot\init.cmd`" $Arguments & set > `"$tmp`""
+    LogInfo "Calling `"$global:DevPrivateRoot\init.cmd`" $global:EnvironmentArguments "
+    cmd /c "call `"$global:DevPrivateRoot\init.cmd`" $global:EnvironmentArguments & set > `"$tmp`""
 
     # bring over the environment variables that were created here
     LogVerbose "Parsing variables from `"$tmp`""
@@ -85,17 +84,24 @@ function Open-DevEnvironment
         [string] $postInitCommand
     )
 
+    $global:EnvironmentName = $environmentName
     $global:DevPrivateRoot = Join-Path $PSScriptRoot "..\DevConsoles\$environmentFolder"
+    $global:EnvironmentArguments = $arguments
 
-    LogInfo "Starting $Env:USERNAME specific initialization for $environmentName"
+    Open-DevEnvironment2
+}
+
+function Open-DevEnvironment2
+{
+    LogInfo "Starting $Env:USERNAME specific initialization for $global:EnvironmentName"
 
     Set-DevEnvironmentExecutionPolicy
 
-    Initialize-DevEnvironment $environmentName $arguments
+    Initialize-DevEnvironment $global:EnvironmentName
 
     Initialize-DevEnvironmentGlobalVariables
 
-    $Host.UI.RawUI.WindowTitle = $environmentName
+    $Host.UI.RawUI.WindowTitle = $global:EnvironmentName
 
     # Load the project specific aliases
     Set-Aliases "$global:DevPrivateRoot\alias.json"
@@ -115,3 +121,4 @@ function Open-DevEnvironment
 }
 
 Export-ModuleMember -Function Open-DevEnvironment
+Export-ModuleMember -Function Open-DevEnvironment2

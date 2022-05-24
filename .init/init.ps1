@@ -31,6 +31,7 @@ function ImportModules
     Import-Module "$PSScriptRoot\gitfunctions.psm1" -force -global
     Import-Module "$PSScriptRoot\logfunctions.psm1" -force -global
     Import-Module "$PSScriptRoot\devenvironment.psm1" -force -global
+    Import-Module "$PSScriptRoot\initializeroutines.psm1" -force -global
 }
 
 ImportModules
@@ -38,5 +39,5 @@ Set-Aliases $PSScriptRoot\globalaliases.json
 
 InstallEnable-Module "posh-git"
 InstallEnable-Module "oh-my-posh"
-Set-PoshPrompt tehrob
+Set-PoshPrompt powerlevel10k_rainbow
 

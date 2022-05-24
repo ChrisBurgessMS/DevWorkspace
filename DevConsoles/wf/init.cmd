@@ -1,2 +1,2 @@
-set NugetMachineInstallRoot=d:\cxcache
-d:\wf\init.full.cmd
+set NugetMachineInstallRoot=%1:\cxcache
+%1:\wf\init.full.cmd
