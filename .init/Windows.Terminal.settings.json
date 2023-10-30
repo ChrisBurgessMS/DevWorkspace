@@ -1,10 +1,10 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions":
+    "actions": 
     [
         {
-            "command":
+            "command": 
             {
                 "action": "copy",
                 "singleLine": false
@@ -20,7 +20,7 @@
             "keys": "ctrl+shift+f"
         },
         {
-            "command":
+            "command": 
             {
                 "action": "splitPane",
                 "split": "auto",
@@ -32,29 +32,20 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{26093418-edbc-4cc0-bfbc-34168922a194}",
-    "newTabMenu":
-    [
-        {
-            "type": "remainingProfiles"
-        }
-    ],
-    "profiles":
+    "profiles": 
     {
-        "defaults":
-        {
-            "elevate": true
+        "defaults": {
+            "font": 
+            {
+                "face": "MesloLGM Nerd Font Mono",
+                "size": 11
+            }
         },
-        "list":
+        "list": 
         [
             {
                 "background": "#000000",
                 "commandline": "C:\\Program Files\\PowerShell\\7\\pwsh.exe -NoExit -Command \"& {InitializeWFEnvironment 'c'}\"",
-                "elevate": true,
-                "font":
-                {
-                    "face": "MesloLGM Nerd Font Mono",
-                    "size": 10.0
-                },
                 "foreground": "#FFFFFF",
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
@@ -65,10 +56,6 @@
             },
             {
                 "colorScheme": "One Half Dark",
-                "font":
-                {
-                    "face": "MesloLGM Nerd Font Mono"
-                },
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "command prompt",
@@ -76,10 +63,6 @@
             },
             {
                 "backgroundImage": null,
-                "font":
-                {
-                    "face": "MesloLGM Nerd Font Mono"
-                },
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "powershell",
@@ -89,10 +72,6 @@
             {
                 "background": "#000000",
                 "commandline": "C:\\Program Files\\PowerShell\\7\\pwsh.exe",
-                "font":
-                {
-                    "face": "MesloLGM Nerd Font Mono"
-                },
                 "foreground": "#FFFFFF",
                 "guid": "{26093418-edbc-4cc0-bfbc-34168922a194}",
                 "hidden": false,
@@ -101,56 +80,24 @@
                 "tabTitle": "powershell core"
             },
             {
-                "colorScheme": "Campbell",
-                "guid": "{4dd1e689-b517-5f39-947d-78e8a8bdf958}",
+                "colorScheme": "Ubuntu-ColorScheme",
+                "commandline": "ubuntu.exe",
+                "cursorShape": "filledBox",
+                "guid": "{69045c76-79d1-46a0-b6e8-8dd4cf5481ff}",
                 "hidden": false,
-                "name": "Ubuntu 20.04.6 LTS",
-                "opacity": 40,
-                "source": "CanonicalGroupLimited.Ubuntu20.04LTS_79rhkp1fndgsc"
+                "icon": "https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png",
+                "name": "Ubuntu",
+                "tabTitle": "Ubuntu"
             },
             {
-                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
-                "hidden": true,
-                "name": "Ubuntu-20.04",
-                "source": "Windows.Terminal.Wsl"
-            },
-            {
-                "antialiasingMode": "grayscale",
-                "backgroundImage": null,
-                "bellStyle":
-                [
-                    "audible",
-                    "window"
-                ],
                 "guid": "{41b4e851-1430-504d-adee-219d28725f31}",
                 "hidden": false,
-                "historySize": 99999,
                 "name": "CBL-Mariner-2.0",
-                "opacity": 100,
-                "source": "Windows.Terminal.Wsl",
-                "useAcrylic": false
-            },
-            {
-                "guid": "{769d30b8-ce3d-5e27-a296-d26f183fdaa0}",
-                "hidden": true,
-                "name": "Developer Command Prompt for VS 2019 (2)",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{05958a02-b046-5cf4-9cbf-b37ae1f2f21e}",
-                "hidden": true,
-                "name": "Developer PowerShell for VS 2019 (2)",
-                "source": "Windows.Terminal.VisualStudio"
-            },
-            {
-                "guid": "{16208362-94fc-5b1f-a491-5b2624d5ab56}",
-                "hidden": true,
-                "name": "Visual Studio Debug Console",
-                "source": "VSDebugConsole"
+                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
-    "schemes":
+    "schemes": 
     [
         {
             "background": "#0C0C0C",
@@ -383,6 +330,29 @@
             "yellow": "#A2734C"
         },
         {
+            "background": "#300A24",
+            "black": "#171421",
+            "blue": "#0037DA",
+            "brightBlack": "#767676",
+            "brightBlue": "#08458F",
+            "brightCyan": "#2C9FB3",
+            "brightGreen": "#26A269",
+            "brightPurple": "#A347BA",
+            "brightRed": "#C01C28",
+            "brightWhite": "#F2F2F2",
+            "brightYellow": "#A2734C",
+            "cursorColor": "#FFFFFF",
+            "cyan": "#3A96DD",
+            "foreground": "#FFFFFF",
+            "green": "#26A269",
+            "name": "Ubuntu-ColorScheme",
+            "purple": "#881798",
+            "red": "#C21A23",
+            "selectionBackground": "#FFFFFF",
+            "white": "#CCCCCC",
+            "yellow": "#A2734C"
+        },
+        {
             "background": "#000000",
             "black": "#000000",
             "blue": "#000080",
@@ -407,7 +377,6 @@
         }
     ],
     "startOnUserLogin": true,
-    "themes": [],
     "useAcrylicInTabRow": true,
     "wordDelimiters": " ()\"',;<>~!@#$%^&*|+=[]{}~?\u2502"
 }

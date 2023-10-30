@@ -28,8 +28,8 @@ function InstallEnable-Module
 
 function InstallOhMyPosh
 {
-    Set-ExecutionPolicy Bypass -Scope Process -Force;
-    Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
+    Set-ExecutionPolicy Bypass
+   # Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
 }
 
 function ImportModules
@@ -44,7 +44,7 @@ function ImportModules
 ImportModules
 Set-Aliases $PSScriptRoot\globalaliases.json
 
-#InstallEnable-Module "posh-git"
+InstallEnable-Module "posh-git"
 InstallOhMyPosh
 
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\powerlevel10k_rainbow.omp.json"
