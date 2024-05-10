@@ -13,6 +13,7 @@ function Initialize-DevEnvironment
 
     # File to hold environment variables from repo init
     $tmp = [System.IO.Path]::GetTempFileName()
+    $env:SKIP_AUTO_UPDATE_COREXT=1
 
     # Call the repo init script
     LogInfo "Calling `"$global:DevPrivateRoot\init.cmd`" $global:EnvironmentArguments "
