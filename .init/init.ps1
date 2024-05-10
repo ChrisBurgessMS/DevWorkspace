@@ -25,6 +25,13 @@ function InstallEnable-Module
     Write-Host "Enabling $ModuleName module..."
     Import-Module $ModuleName -force
 }
+
+function InstallOhMyPosh
+{
+    Set-ExecutionPolicy Bypass
+   # Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://ohmyposh.dev/install.ps1'))
+}
+
 function ImportModules
 {
     Import-Module "$PSScriptRoot\commonfunctions.psm1" -force -global
@@ -38,6 +45,8 @@ ImportModules
 Set-Aliases $PSScriptRoot\globalaliases.json
 
 InstallEnable-Module "posh-git"
-InstallEnable-Module "oh-my-posh"
-Set-PoshPrompt powerlevel10k_rainbow
+InstallOhMyPosh
+
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\powerlevel10k_rainbow.omp.json"
+#Set-PoshPrompt powerlevel10k_rainbow
 
