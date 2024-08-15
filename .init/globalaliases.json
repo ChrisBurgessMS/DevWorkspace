@@ -1,6 +1,6 @@
 {
     "aliases": [
-        // Place aliases to commands you like here
+        // Place aliases to commands you like which are not specific to an environment here
         {
             "Name":  "..",
             "Value": "GotoParentDir"
@@ -23,6 +23,17 @@
         {
             "Name":  "cd",
             "Value": "cdcmd",
+            "Option": "AllScope"
+        },
+        {
+            "Name":  "Open-DevEnv",
+            "Value": "Open-DevEnvironment",
+            "Option": "AllScope"
+        }
+        ,
+        {
+            "Name":  "owd",
+            "Value": "Open-WindowsFabricDevEnvironment",
             "Option": "AllScope"
         }
     ]

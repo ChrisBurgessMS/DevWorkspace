@@ -23,6 +23,10 @@
         {
             "Name":  "srcroot",
             "Value": "GotoSrcRoot"
+        },
+        {
+            "Name": "slngen",
+            "Value": "$env:PkgSlnGen\\slngen.cmd"
         }
     ]
 }

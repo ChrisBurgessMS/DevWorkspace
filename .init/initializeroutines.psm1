@@ -1,10 +1,10 @@
-﻿function InitializeWFEnvironment
+﻿function Open-WindowsFabricDevEnvironment
 {
     param (
         [string] $driveLetter
     )
 
-    Open-DevEnvironment "WindowsFabric" "wf" $driveLetter
+    Open-CoreXTEnvironment "WindowsFabric" "wf" $driveLetter
 }
 
-Export-ModuleMember -Function 'InitializeWFEnvironment'
+Export-ModuleMember -Function 'Open-WindowsFabricDevEnvironment'

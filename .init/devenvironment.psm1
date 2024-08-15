@@ -1,4 +1,4 @@
-function Initialize-DevEnvironment
+function Initialize-CoreXT
 {
     param (
         [string] $environmentName
@@ -13,8 +13,7 @@ function Initialize-DevEnvironment
 
     # File to hold environment variables from repo init
     $tmp = [System.IO.Path]::GetTempFileName()
-    $env:SKIP_AUTO_UPDATE_COREXT=1
-
+    $env:AGENT_NAME="skipupdate"
     # Call the repo init script
     LogInfo "Calling `"$global:DevPrivateRoot\init.cmd`" $global:EnvironmentArguments "
     cmd /c "call `"$global:DevPrivateRoot\init.cmd`" $global:EnvironmentArguments & set > `"$tmp`""
@@ -29,7 +28,7 @@ function Initialize-DevEnvironment
     }
 }
 
-function Initialize-DevEnvironmentGlobalVariables
+function Initialize-CoreXTGlobalVariables
 {
     # create some basic variables
     LogInfo "Creating Global Variables"
@@ -76,7 +75,7 @@ function Execute-DevEnvironmentPostInitCommand
     }
 }
 
-function Open-DevEnvironment
+function Open-CoreXTEnvironment
 {
     param (
         [string] $environmentName,
@@ -89,18 +88,18 @@ function Open-DevEnvironment
     $global:DevPrivateRoot = Join-Path $PSScriptRoot "..\DevConsoles\$environmentFolder"
     $global:EnvironmentArguments = $arguments
 
-    Open-DevEnvironment2
+    Open-CoreXTEnvironment2
 }
 
-function Open-DevEnvironment2
+function Open-CoreXTEnvironment2
 {
     LogInfo "Starting $Env:USERNAME specific initialization for $global:EnvironmentName"
 
     Set-DevEnvironmentExecutionPolicy
 
-    Initialize-DevEnvironment $global:EnvironmentName
+    Initialize-CoreXT $global:EnvironmentName
 
-    Initialize-DevEnvironmentGlobalVariables
+    Initialize-CoreXTGlobalVariables
 
     $Host.UI.RawUI.WindowTitle = $global:EnvironmentName
 
@@ -121,5 +120,5 @@ function Open-DevEnvironment2
     }
 }
 
-Export-ModuleMember -Function Open-DevEnvironment
-Export-ModuleMember -Function Open-DevEnvironment2
+Export-ModuleMember -Function Open-CoreXTEnvironment
+Export-ModuleMember -Function Open-CoreXTEnvironment2
