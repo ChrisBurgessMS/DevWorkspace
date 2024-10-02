@@ -26,7 +26,13 @@ function Switch-Branch
     Open-DevEnvironment2
 }
 
+function Launch-SlnGen($project)
+{
+    . "$env:PkgSlnGen\\slngen.cmd" $project
+}
+
 Export-ModuleMember -Function 'Open-SetupSolution'
 Export-ModuleMember -Function 'Enable-LinuxView'
 Export-ModuleMember -Function 'Disable-LinuxView'
 Export-ModuleMember -Function 'Switch-Branch'
+Export-ModuleMember -Function 'Launch-SlnGen'
